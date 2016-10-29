@@ -1,0 +1,42 @@
+Type classes 
+
+Eq --> == and /-, which is equals to and not equal to...numbers, lists, strings, char etc can be checked
+
+Ord --> >, <, >=, <= 
+	compare function --> takes two Ord members of same type and returns an ordering
+	Ordering type --> can be GT, EQ, LT
+	All members of ORD should be a member of EQ club
+
+Show --> all types are of type show
+		 it takes al the members under the show class and converts it to STRING
+
+Read --> opposite of show
+		 takes a string --> converts it to the type that is required
+		 read "True" || False => True
+		 read "8.2" + 3.8 => 12.0
+		 -->	read "5" :: Int, this is called explpicit type annotations
+
+Enum --> sequentially ordered types 
+	     types in list ranges
+	     succ and pred functions
+	     types are (), Bool, Char, Ordering, Int, Integer, Float and Double
+	     Example: ['a'..'e'] => "abcde"  
+
+Bounded --> members have an upper and lower bound
+			minBound and maxBound
+			Example: minBound :: Int  => -2147483648	
+
+Num --> Numbers are of type class Num
+		Int, Integer, Float, Double
+		Types shoould also be friends with show and Eq type class
+
+Integral --> Int and Integer
+			 Includes only whole numbers
+
+Floating --> Float and Double
+		     
+fromIntegral --> fromIntegral :: (Num b, Integral a) => a -> b
+				 Takes an int and converts it in to more general form NUM
+				 	 
+
+

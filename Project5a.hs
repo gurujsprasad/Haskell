@@ -11,7 +11,7 @@ toIntList number = reverse(map digitToInt number)
 --"467" => [4,6,7]
 
 isValidCard :: [Char] -> Bool
-isValidCard number = (sum . checkSum . toIntList) number `mod` 10 == 0
+isValidCard number = sum . checkSum . (toIntList number) `mod` 10 == 0
 
 --u need to double all the elements from the right starting from second position and all the alternative
 --u will all the double 2 digit elemenents in to single digit
